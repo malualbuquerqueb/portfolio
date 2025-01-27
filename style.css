@@ -3,7 +3,7 @@ body {
     background-image: url('img/fundopreto.png');
     margin: 0;
     padding: 0;
-    
+    overflow-x: hidden; 
 }
 
 html {
@@ -51,6 +51,22 @@ html {
     gap: 10px;
 }
 
+.progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    z-index: 1000;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #f5a2c1;
+    width: 0%;
+}
+
 @media (max-width: 768px) {
     .navbar {
         flex-wrap: wrap;
@@ -58,11 +74,11 @@ html {
         padding: 10px;
     }
 
-    /* Esconde o menu por padrão em telas pequenas */
+   
     .menu {
         display: none;
-        flex-direction: column; /* Links ficam em coluna */
-        width: 100%; /* Menu ocupa toda a largura */
+        flex-direction: column; 
+        width: 100%; 
         background-color: rgb(0, 0, 0);
         text-align: center;
     }
@@ -72,6 +88,10 @@ html {
         font-size: 20px;
         padding: 10px 0;
     }
+
+    .progress {
+       display: none;
+    }
 }
 
 
@@ -80,7 +100,7 @@ html {
     height: 100vh;
     background-image: url('img/fundo1.png');
     background-size: cover;
-    background-position: right center; /* Foco na parte direita em telas grandes */
+    background-position: right center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,19 +128,19 @@ html {
 
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
     .fundo1 h2 {
-        font-size: 25px; /* Reduz o tamanho do subtítulo */
+        font-size: 25px; 
     }
 
     .fundo1 h1 {
         font-size: 3.6rem;
-        margin-top: -1rem; /* Reduz o tamanho do título */
+        margin-top: -1rem;
     }
 
     .fundo1 {
-        padding: 1rem; /* Reduz o padding em telas menores */
+        padding: 1rem;
         
         background-position: center;
     
@@ -163,17 +183,29 @@ html {
     margin-top: 5rem;
 }
 
+.link-projetos {
+        color: #ffbee3; 
+        text-decoration: none;
+        font-weight: bold; 
+        transform: scale(1.1);
+}
+
+.link-projetos:hover { 
+        color: #dd57ac; 
+        border-bottom-color: #ffffff;
+}
+
 .profile-pic {
-   width: 20rem; /* Tamanho padrão da imagem */
+    width: 20rem;
     border-radius: 8px;
-    margin: 2rem ; /* Centraliza a imagem em telas pequenas */
+    margin: 2rem ; 
     margin-top: 10px;
-    transition: all 0.3s ease; /* Suaviza o redimensionamento */
+    transition: all 0.3s ease; 
 }
 
 .text h3 {
     font-weight: bold;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .text p {
@@ -191,32 +223,45 @@ html {
 }
 
 @media (max-width: 768px) {
+    
+    .sobre h2 {
+        font-size: 2rem;
+    }
     .sobre-content {
-        flex-direction: column; /* Muda para layout vertical em telas menores */
-        align-items: center; /* Centraliza os itens no centro */
+        flex-direction: column; 
+        align-items: center;
+    }
+    .text h3 {
+        font-size: 1.6rem !important; 
+        white-space: nowrap; /* Impede a quebra do texto */
     }
 
     .profile-pic {
-        width: 18rem; /* Reduz o tamanho da imagem para telas menores */
+        width: 18rem; 
+        margin-bottom: -1.5rem;
     }
 
     .text h3 {
-        font-size: 2rem; /* Reduz o tamanho do título */
-        text-align: center; /* Centraliza o texto */
+        font-size: 2rem; 
+        text-align: center; 
     }
 
     .text p {
-        font-size: 1rem; /* Reduz o tamanho do texto */
-        text-align: center; /* Centraliza o texto */
+        font-size: 1rem; 
+        text-align: center;
         line-height: 1.4;
     }
 
     .sobre h2 {
-        font-size: 2.5rem; /* Reduz o tamanho do h2 */
-        text-align: center; /* Centraliza o h2 */
-        margin-left: 0; /* Remove margens para centralização */
+        font-size: 2.5rem; 
+        text-align: center; 
+        margin-left: 0; 
     }
 }
+
+
+
+
 
 .skills h1 {
     color: white;
@@ -229,14 +274,17 @@ html {
 .minha-animacao {
     width: 20rem;
     border-radius: 8px;
-    margin: 55px;
+    margin: 2rem ; 
     margin-top: 10px;
+    transition: all 0.3s ease; 
 }
 
 .detalhe {
-    margin-left: -4rem;
+    margin-left: 21.5rem;
     width: 30rem;
-    margin-bottom: 7rem;
+    margin-bottom: 17rem;
+    margin-top: -28rem;
+
 }
 
 .skills-logos {
@@ -245,8 +293,9 @@ html {
     align-items: center;
     gap: 5px;
     padding: 2px;
-    margin-top: -35rem;
+    margin-top: -45rem;
     margin-left: 15rem;
+
 
 }
 
@@ -282,38 +331,69 @@ html {
 
 }
 
+
+
+
+@media (max-width: 768px) {
+
+    .skills h1 {
+        font-size: 2rem;
+        
+    }
+    
+
+.minha-animacao {
+    width: 18rem; 
+    margin-bottom: 30rem;
+    
+    margin-left: 3.4rem;
+
+}    
+.skills-logos {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; 
+    padding: 20px; 
+    margin-bottom: 30rem;
+
+    
+
+}
+
+.skills-logos img {
+    width: 7rem;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.detalhe {
+    display: none;
+}
+.decoracao-skills {
+    display: none;
+}
+
+.decoracao-skills2 {
+   display: none;
+}
+
+}
+
+
+
 .projetos h1 {
     color: white;
     font-size: 3rem;
     margin-left: 3.5rem;
-    margin-top: -8rem;
+    margin-top: -16rem;
 }
-
-.progress {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 10px;
-    background-color: #e0e0e0;
-    z-index: 1000;
-}
-
-.progress-bar {
-    height: 100%;
-    background-color: #f5a2c1;
-    width: 0%;
-}
-
 
 .cartoes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* Força 3 cards por linha */
     gap: 20px;
     width: 90%;
     margin: 0 auto;
-    /* Centraliza o container horizontalmente */
     justify-content: center;
 }
 
@@ -346,9 +426,7 @@ html {
 .card p {
     .card p {
         font-size: 0.9rem;
-        /* Antes: 1rem */
         margin: 0 10px 10px;
-        /* Antes: 0 15px 15px */
     }
 }
 
@@ -358,12 +436,11 @@ html {
     transition: transform 0.3s;
     display: inline-block;
     margin-top: -13px;
-    color: #2d0023;
+    color: #000000;
 }
 
 .github-logo:hover {
-    transform: scale(1.1);
-    /* Aumenta levemente ao passar o mouse */
+    transform: scale(1.3);
 }
 
 .contato {
@@ -497,13 +574,22 @@ footer p {
     margin: 0;
     font-size: 17px;
 }
+footer a {
+    color: #ffd3ec; 
+    text-decoration: none;
+    font-weight: bold; 
+    transition: color 0.3s; 
+}
+footer a:hover {
+    color: #dd57ac; /* Cor ao passar o mouse */
+}
 
 .logoss-contatoss{
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-top: 4rem;
     align-items: center;
     text-align: center; 
 
@@ -535,4 +621,47 @@ footer p {
 .imagens-contatoss:hover {
     transform: scale(1.1);
     
+}
+
+@media (max-width: 768px) {
+    .contato h1 {
+        font-size: 2.5rem; 
+    }
+
+    form {
+        max-width: 20rem;
+    }
+
+    .logoss-contatoss h1 {
+        display: none;
+    }
+
+    .imagens-contatoss {
+        width: 50px; 
+        display: grid
+    }
+
+    input,
+    textarea,
+    button {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    textarea {
+        min-height: 8rem; 
+    }
+
+    button {
+        padding: 0.8rem;
+    }
+
+    footer p {
+        font-size: 0.8rem; /* Fonte menor para telas pequenas */
+    }
+
+    footer a {
+        display: inline-block; /* Força os links a ficarem em linha separados */
+        margin: 0 0.2rem; /* Adiciona espaço entre os links */
+    }
 }
