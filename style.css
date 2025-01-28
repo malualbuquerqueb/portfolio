@@ -74,7 +74,6 @@ html {
         padding: 10px;
     }
 
-   
     .menu {
         display: none;
         flex-direction: column; 
@@ -90,7 +89,7 @@ html {
     }
 
     .progress {
-       display: none;
+        display: none;
     }
 }
 
@@ -184,21 +183,22 @@ html {
 }
 
 .link-projetos {
-        color: #ffbee3; 
-        text-decoration: none;
-        font-weight: bold; 
-        transform: scale(1.1);
+    color: #dd57ac; 
+    text-decoration: none;
+    font-weight: bold; 
+    transition: font-size 0.3s, color 0.3s;
 }
 
 .link-projetos:hover { 
-        color: #dd57ac; 
-        border-bottom-color: #ffffff;
+    color: #863d6b; 
+    font-size: 2.1rem;
 }
 
 .profile-pic {
-    width: 20rem;
-    border-radius: 8px;
-    margin: 2rem ; 
+    width: 20rem; 
+    height: auto; 
+    border-radius: 8px; 
+    margin: 2rem; 
     margin-top: 10px;
     transition: all 0.3s ease; 
 }
@@ -266,7 +266,7 @@ html {
 .skills h1 {
     color: white;
     font-size: 3rem;
-    margin-left: 3.5rem;
+    margin-left: 2rem;
     margin-top: 3rem;
     margin-bottom: 0;
 }
@@ -374,7 +374,7 @@ html {
 }
 
 .decoracao-skills2 {
-   display: none;
+    display: none;
 }
 
 }
