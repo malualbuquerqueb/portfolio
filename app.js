@@ -8,6 +8,7 @@ window.addEventListener('scroll', () => {
     const scrollPercent = (scrollTop / docHeight) * 100;
     document.querySelector('.progress-bar').style.width = `${scrollPercent}%`;
 });
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -90,5 +91,3 @@ const formSubmit = new FormSubmit({
     error: "<h1 class='error'>Não foi possível enviar sua mensagem.</h1>",
 });
 formSubmit.init();
-
- 
