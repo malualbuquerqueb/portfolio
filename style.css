@@ -139,8 +139,8 @@ html {
 }
 
 .fundo1 h1 {
-    font-size: clamp(3rem, 1000vw, 13rem);
-    margin: 0;
+    font-size: clamp(3rem, 1000vw, 12rem);
+    margin-top: -45px;
     color: #ce85a2;
     font-family: 'League Spartan', sans-serif;
 
