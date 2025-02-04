@@ -493,9 +493,6 @@ html {
 
 
 
-@media (max-width: 768px) {
-
-}
 
 .contato {
     display: flex;
@@ -514,14 +511,23 @@ html {
     
     display: flex;
     align-items: center;
-    margin: 0;
     margin-bottom: 1.8rem !important;
     text-align: center;
-    font-size: 2.3rem !important;
+    font-size: 4.5rem !important;
     margin: 0;
     color: #ce85a2;
     font-family: "Ubuntu", serif;
     
+}
+
+.contato h2 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem !important;
+    margin-right: 7rem;
+    color: #ffffff;
+    ;
 }
 
 form {
@@ -681,7 +687,14 @@ footer a:hover {
 
 @media (max-width: 768px) {
     .contato h1 {
-        font-size: 2.5rem; 
+       
+        font-size: 2.4rem !important;
+        color: #ce85a2;
+        
+    }
+    
+    .contato h2 {
+        display: none;
     }
 
     form {
